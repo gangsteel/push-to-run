@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo Hello from the remote:
+echo $HOSTNAME
+echo You just pushed a change!
+
+export GIT_WORK_TREE=~/git_test
+export GIT_DIR=${GIT_WORK_TREE}/.git
+
+cd $GIT_WORK_TREE
+echo Now updating your running directory at:
+pwd
+git pull
+git checkout master
+echo Master branch is checked out.
+echo You are:
+whoami
+echo Now running your pushed script:
+echo ---------------------------------
+./printHOST
+

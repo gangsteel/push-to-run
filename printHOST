@@ -1,0 +1,8 @@
+#!/bin/bash
+# Here is an example code you want to run remotely
+echo You are now at host:
+echo $HOSTNAME
+echo Welcome! You are running as:
+whoami
+echo Your pushed code is running now!
+date
